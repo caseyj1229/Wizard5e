@@ -6,7 +6,7 @@ public class Connector {
 
     public boolean open(){
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/wizardspells?useSSL=false", "root", "Elxxuz0r1229");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/wizardspells?useSSL=false", "root", "pw");
             //System.out.println("Successful Connection");
             //stmt = conn.createStatement();
         }
