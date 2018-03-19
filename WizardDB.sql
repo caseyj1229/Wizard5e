@@ -1,0 +1,77 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: localhost    Database: wizardspells
+-- ------------------------------------------------------
+-- Server version	5.7.20-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `level1spells`
+--
+
+DROP TABLE IF EXISTS `level1spells`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `level1spells` (
+  `SpellName` varchar(30) NOT NULL,
+  `SpellDescription` varchar(500) NOT NULL,
+  `SpellSchool` varchar(3) NOT NULL,
+  PRIMARY KEY (`SpellName`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `level1spells`
+--
+
+LOCK TABLES `level1spells` WRITE;
+/*!40000 ALTER TABLE `level1spells` DISABLE KEYS */;
+INSERT INTO `level1spells` VALUES ('Alarm','You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won’t set off the alarm. You also choose whether the alarm is mental or audible.','ABJ'),('Burning Hands','As you hold your hands with the thumbs touching and fingers spread, a thin sheet of flames shoots forth from your fingers.  Each creature in a 15ft cube must make a DEX saving throw or take 3d6 fire damage, or half as much on a successful save.  For each level above 1st, add 1d6 fire damage.','EVO'),('Charm Person','You attempt to charm a humanoid you can see.  It must make a WIS saving throw and does so with advantage if you are currently fighting it.  If it fails the saving throw the target is charmed by you until the spell ends or you attack it.  For each level above 1st you can target an additional humanoid.','ENC'),('Chromatic Orb','You hurl a ball of energy at a target you can see within range.  Choose acid, cold, fire, lightning, poison, or thunder damage for the type of orb.  Make a spell attack and on a hit deal 3d8 damage.  Increase the damage by 1d8 for each level above first','EVO'),('Color Spray','An array of flashing, colored light springs from your hand.  Roll 6d10: the total hit points of creatures affected by this spell.  Starting with the creature with the lowest hit points in the area, every creature affected is blinded.  For each level above 1st, roll additional 2d10.','ILL'),('Comprehend Languages','For the duration, you can understand the literal meaning of any language you can see.  Additionally, you can read any language so long as you are touching the surface they are written on.','DIV'),('Detect Magic','For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.','DIV'),('Disguise Self','You make yourself,  including your equipment, look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can\'t change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.  TO discern the illusion a creature must make an Inteliigence check against your Spell Save DC','ILL'),('Expeditious Retreat','This spell allows you to move at an incredible pace.  Upon casting this spell, you can take the Dash action as a bonus action on each of your turns until the spell ends','TRN'),('False Life','Bolstering yourself with a necromantic facsimilie of life, you gain 1d4+4  temporary hit points for the duration.  For each level above 1st gain an additional 5 hit points.','NEC'),('Feather Fall','Choose up to 5 falling creatures within range.  A creature\'s fall speed becomes 60ft per round.  If the creature hits the ground before the spell ends, it takes no fall damage.','TRN'),('Find Familiar','You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk, Lizard, Octopus, owl, Poisonous Snake, fish (quipper), rat, raven, Sea Horse, Spider, or Weasel. Appearing in an unoccupied space within range, the familiar has the Statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast.  For a full list of actions for the familiar, look in the PHB.','CON'),('Fog Cloud','You create a 20-foot-radius of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.  For each level above 1st, increase the radius of the cloud by 20ft','CON'),('Grease','Slick grease covers the ground in a 10-foot square centered on a point within range.  That spot becomes difficult terrain for the duration.  When the grease appears each creature in its area or that enters the are on its turn must make a DEX saving throw or fall prone.','CON'),('Identify','Choose one object or creature that you must touch throughout the duration.  If an object, you learn its properties, how to use the item, the spell that created the item, and whether or not the item requires attunement or charges.  If a creature you learn any spells are currently affecting the creature.','DIV'),('Illusory Script','You write on a parchment, paper, or some other suitable surface and imbue it with a potent illusion for the duration.  To you and any creatures you designate when the spell is cast, the writing appears normal.  To all others the writing appears as if it were written in an unknown magical language or any other language you know.  A creature with truesight can see through the illusion.  When the spell fades, the illusion fades and the writing appears normal.','ILL'),('Jump','Touch a creature.  That creature\'s jump distance is tripled until the spell ends.','TRN'),('Longstrider','Touch a creature.  The creature\'s speed increases by 10 until the spell ends.  For every level above first you may select one additional creature.','TRN'),('Mage Armor','You touch a willing creature who isn\'t wearing armor.  A protective magical force surrounds the target until the spell ends.  The creature\'s AC becomes 13+its DEX modifier.  The spell ends if you dismiss the spell as an action or the target dons armor.','ABJ'),('Magic Missile','You create three glowing darts of magical force.  Each dart hits a creature of your choice that you can see within range.  A dart deals 1d4+1 force damage.  The darts strike simultaneously and can hit one or multiple targets.  For each level above first you create one additional dart.','EVO'),('Protection from Good and Evil','Touch one willing creature, who gains protection from aberrations, celestials, elementals, fey, fiends, and undead.  The creature gains immunity to charm, fear, and possesion as well as advantage on saving throws if already afflicted by one of these conditions.  Those creatures have disadvantage on attack rolls against the target','ABJ'),('Ray of Sickness','A ray of sickly green energy lashes out toward a target in range.  Make a ranged spell attack against the target.  On a hit the target takes 2d8 poison damage and must make a CON saving throw or be poisoned until the end of its turn.  Increase the damage by 1d8 for each level above first.','NEC'),('Shield','An invisible barrier of magical energy appears to protect you.  Until the start of your next turn you have a +5 to your AC and you are immune to magic missile.','ABJ'),('Silent Image','You create the image of some visible phenomena no larger than a 15-foot cube.  The image appears in that spot and lasts the duration.  The image has no sensory effects.  You can move the image using an action to anywhere in range.  Physical interaction with the image reveals the illusion otherwise a creature may spend an action making an INT check against your spell DC to discern the image.','ILL'),('Sleep','Roll 5d8: the total hit points of creatures affected.  Creatures within 20ft of where you choose are affected.  Starting with the creature with the lowest hit points, each creature affected falls asleep.  If the remaining hit points are less than the next target\'s hit points, the creature is unaffected.  Targets immune to charm are unaffected.','ENC'),('Tasha\'s Hideous Laughter','A creature of your choice begins laughing uncontrollably.  The target makes a WIS saving throw or becomes incapacitated and unable to stand for the duration.  At the end of its turn or when it takes damage the creature can attempt another WIS saving throw.','ENC'),('Tenser\'s Floating Disk','The spell creates a circular, horizontal plane of energy, 3 feet in diamter and 1 inch thick that floats 3ft above the ground in an unoccupied space.  The disk can hold up to 500lbs and moves toward you if you are more than 20ft from it.  The disk can follow changes in elevation up to 10ft.  The disk fades if you are more than 100ft from it or place more than 500lbs on it.','CON'),('Thunderwave','A wave of thunderous force sweeps out from ypu.  Each creature in a 15ft cube originating from you must make a CON saving throw.  On a failed save the target takes 2d8 thunder damage and is pushed 10ft from you.  On a success the target takes half damage.  Additionally, unsecured objects are automatically pushed 10ft from you.  For each level above 1st increase the damage by 1d8.','EVO'),('Unseen Servant','The spell creates an invisible, mindless, shapeless force that performs simple tasks.  The servant has an AC of 10 and a STR of 2.  The servant cannot attack.  You can command the servant using a bonus action on each of your terms.  The servant cannot move more than 60ft from you.','CON'),('Witch Bolt','A beam of crackling energy lances out toward a creature.  Make a ranged spell attack against the creature.  On a hit the creature takes 1d12 lightning damage and on each of your turns you can use your action to automatically damage the target.  For each level above first, increase the damage by 1d12.','EVO');
+/*!40000 ALTER TABLE `level1spells` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `level2spells`
+--
+
+DROP TABLE IF EXISTS `level2spells`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `level2spells` (
+  `SpellName` varchar(30) NOT NULL,
+  `SpellDescription` varchar(500) NOT NULL,
+  `SpellSchool` varchar(3) NOT NULL,
+  PRIMARY KEY (`SpellName`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `level2spells`
+--
+
+LOCK TABLES `level2spells` WRITE;
+/*!40000 ALTER TABLE `level2spells` DISABLE KEYS */;
+INSERT INTO `level2spells` VALUES ('Alter Self','You assume a different form, choosing to either transform for your appearance, gain natural weapons, or aquatic adaptation.  Natural Weapons include fangs, claws, etc. and deal 1d6 damage.  Aquatic adaptation grants underwater breathing and a swim speed of 30 feet.','TRN'),('Arcane Lock','You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the Duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting knock on the object suppresses arcane lock for 10 minutes.','ABJ'),('Blindness/Deafness','You can blind or deafen a foe. Choose one creature that you can see within range to make a Constitution saving throw. If it fails, the target is either Blinded or Deafened (your choice) for the Duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends.  For each level above 2nd, choose one additional creature.','NEC'),('Blur','Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn’t rely on sight, as with blindsight, or can see through illusions, as with truesight.','ILL'),('Cloud of Daggers','You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell’s area for the first time on a turn or starts its turn there.  For each level above 2nd increase the damage by 2d4.','CON'),('Continual Flame','A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn’t use oxygen. A continual flame can be covered or hidden but not smothered or quenched.','EVO'),('Crown Of Madness','One humanoid of your choice must make a WIS saving throw.  On a failed save the target is charmed, and must make a melee attack against a creature of your choice at the start of its turn. At the end of its turn the target makes another saving throw and ends the spell on a success.','ENC'),('Darkness','Magical darkness envelops an area of your choice in a 15ft cube.  Creatures with darkvision cannot see through the darkness and non-magical light does not work.  If any of the spells area overlaps with magical light cast lower than 2nd level, the light fades.','EVO'),('Darkvision','You touch a willing creature, which gains the ability to see in the dark up to 60ft.','TRN'),('Detect Thoughts','For the duration you can read the thoughts of creatures whose intelligence is greater than 3.  You immediately detect what is most prominent in their mind at that time.  If you attempt to probe deeper, the target makes a WIS saving throw.  On a fail, you can detect how the creature feels and reasons.  The creature is aware you are attempting to probe its mind.','DIV'),('Enlarge/Reduce','You cause a creature or object to grow one size category larger or smaller.  Check the Player\'s handbook for full description of the Enlarged and Reduced conditions.','TRN');
+/*!40000 ALTER TABLE `level2spells` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-03-19 16:35:05
